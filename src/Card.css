@@ -1,0 +1,35 @@
+.card {
+  width: 350px;
+  height: 267px;
+  background-color: white;
+  padding: 77px 32px 41px 32px;
+  position: relative;
+  border-radius: 5px;
+}
+.card2 {
+  align-self: center;
+}
+.card3 {
+  align-self: flex-end;
+}
+.card__icon {
+  height: 88px;
+  width: 88px;
+  background-color: #3a3054;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -44px;
+}
+.card > h2 {
+  font-size: 22px;
+  line-height: 33px;
+}
+.card > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  color: #9e9aa8;
+}

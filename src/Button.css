@@ -1,0 +1,14 @@
+.button {
+  background-color: #2bd0d0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 20;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.button:hover {
+  background-color: #9ae3e3;
+}
