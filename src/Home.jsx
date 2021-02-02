@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Button from "./Button";
 import "./Home.css";
 import BgFirstSection from "./assets/images/illustration-working.svg";
@@ -15,6 +15,8 @@ import { CgClose } from "react-icons/cg";
 
 const Home = () => {
   const props = useContext(AppContext);
+  const [alert, setAlert] = useState(false);
+  const input = useRef();
 
   const handleMenuToggle = () => {
     props.setMenuIsOpen(!props.menuIsOpen);
@@ -29,14 +31,18 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (props.input.match(/(\S+\.[^/\s]+(\/\S+|\/|))/g)) {
+      input.current.style.border = "none";
+      setAlert(false);
       props.setIsLoading(true);
       props.setQuery(props.input);
       props.getShortenUrl();
       props.setInput("");
       return;
     }
-    alert("not a url");
+    setAlert(true);
+    input.current.style.border = "3px solid #F46363";
   };
+
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       handleSubmit(e);
@@ -81,15 +87,19 @@ const Home = () => {
       <section className="second__section">
         <div>
           <div className="First__section__search__input__container">
-            <input
-              type="text"
-              placeholder="Shorten a link here..."
-              value={props.input}
-              onKeyDown={handleKeyDown}
-              onChange={(e) => {
-                props.setInput(e.target.value);
-              }}
-            />
+            <div>
+              <input
+                ref={input}
+                type="text"
+                placeholder="Shorten a link here..."
+                value={props.input}
+                onKeyDown={handleKeyDown}
+                onChange={(e) => {
+                  props.setInput(e.target.value);
+                }}
+              />
+              {alert && <div id="alert__url">Please add a valid URL</div>}
+            </div>
             <div style={{ zIndex: "50" }} onClick={handleSubmit}>
               <Button
                 text="Shorten it"
@@ -102,7 +112,7 @@ const Home = () => {
             </div>
           </div>
           <div className="second__section__results__container">
-            {props.isLoading ? (
+            {props.isLoading && (
               <div className="loader__container">
                 <Loader
                   type="ThreeDots"
@@ -111,20 +121,18 @@ const Home = () => {
                   width={80}
                 />
               </div>
-            ) : (
-              props.results.map((result) => {
-                return (
-                  <SearchResultCard
-                    key={result.result}
-                    result={result}
-                    handleCopy={handleCopy}
-                  />
-                );
-              })
             )}
+            {props.results.map((result) => {
+              return (
+                <SearchResultCard
+                  key={result.result}
+                  result={result}
+                  handleCopy={handleCopy}
+                />
+              );
+            })}
           </div>
         </div>
-
         <div className="second__section__wrapper">
           <div className="second__section__text">
             <h3>Advanced Statistics</h3>

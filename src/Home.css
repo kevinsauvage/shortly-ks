@@ -60,9 +60,10 @@
   border-radius: 10px;
   background-color: #534970;
 }
-.First__section__search__input__container > div {
+.First__section__search__input__container > div:last-child {
   height: 64px;
   width: 188px;
+  z-index: 50;
 }
 .First__section__search__input__container::after {
   background-image: url("./assets/images/bg-boost-desktop.svg");
@@ -75,7 +76,7 @@
   width: 100%;
   border-radius: 10px;
 }
-.First__section__search__input__container > input {
+.First__section__search__input__container > div > input {
   height: 64px;
   width: 769px;
   border-radius: 10px;
@@ -86,6 +87,16 @@
   line-height: 36px;
   letter-spacing: 0.15px;
   color: #34313d;
+}
+#alert__url {
+  color: #f46363;
+  position: absolute;
+  font-size: 16px;
+  line-height: 18px;
+  bottom: 25px;
+}
+.First__section__search__input__container > div {
+  z-index: 50;
 }
 .second__section > div {
   width: 1110px;
