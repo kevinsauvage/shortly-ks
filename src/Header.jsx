@@ -17,19 +17,19 @@ const Header = () => {
     <div
       className={
         props.menuIsOpen
-          ? "header__container menu-is-open"
-          : "header__container"
+          ? "header__container menu-is-open flex-jc-sb-ai-center"
+          : "header__container flex-jc-sb-ai-center"
       }>
       <div className="header__left">
         <img src={Logo} alt="logo" className="header__left__logo" />
-        <nav className="header__left__nav">
+        <nav className="header__left__nav flex-ai-c">
           <li>Features</li>
           <li>Pricing</li>
           <li>Ressources</li>
         </nav>
       </div>
       <div className="header__right">
-        <ul className="header__right__btn__container">
+        <ul className="header__right__btn__container flex-ai-c">
           <li>Login</li>
           <li className="header__right__btn__signUp">
             <Button

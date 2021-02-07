@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="footer__wrapper">
+      <div className="container">
         <div className="footer__logo">
           <h2>Shortly</h2>
         </div>

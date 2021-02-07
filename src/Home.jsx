@@ -1,7 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 import Button from "./Button";
 import "./Home.css";
-import BgFirstSection from "./assets/images/illustration-working.svg";
 import Card from "./Card";
 import Icon1 from "./assets/images/icon-brand-recognition.svg";
 import Icon2 from "./assets/images/icon-detailed-records.svg";
@@ -60,7 +59,7 @@ const Home = () => {
             <BiMenuAltRight size={30} />
           )}
         </div>
-        <div className="first__section__wrapper">
+        <div className="first__section__container container">
           <div className="First__section__text__container">
             <h1>More than just shorter links</h1>
             <h2>
@@ -76,17 +75,12 @@ const Home = () => {
               lineHeight="30px"
             />
           </div>
-          <div></div>
-          <img
-            className="First__section__bg__illustration"
-            src={BgFirstSection}
-            alt=""
-          />
+          <div className="heroImg"></div>
         </div>
       </section>
-      <section className="second__section">
+      <section className="second__section flex-ai-c">
         <div>
-          <div className="First__section__search__input__container">
+          <div className="second__section__search__input__container flex-ai-c">
             <div>
               <input
                 ref={input}
@@ -113,7 +107,7 @@ const Home = () => {
           </div>
           <div className="second__section__results__container">
             {props.isLoading && (
-              <div className="loader__container">
+              <div className="container loader__container">
                 <Loader
                   type="ThreeDots"
                   color="#00BFFF"
@@ -133,15 +127,15 @@ const Home = () => {
             })}
           </div>
         </div>
-        <div className="second__section__wrapper">
-          <div className="second__section__text">
+        <div className="container second__section__container">
+          <div className="second__section__text flex-jc-c-ai-c">
             <h3>Advanced Statistics</h3>
             <p>
               Track how your links are performing across the web with our
               advanced statistics dashboard.
             </p>
           </div>
-          <div className="second__section_cards__container">
+          <div className="second__section_cards__container flex-jc-sb">
             <Card
               cl="card1"
               icon={Icon1}
@@ -163,7 +157,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="third__section">
+      <section className="third__section flex-jc-c-ai-c">
         <h2>Boost your links today</h2>
         <Button
           radius="28px"

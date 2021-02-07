@@ -4,7 +4,7 @@ import "./Button.css";
 const Button = ({ text, width, height, radius, fontSize, lineHeight }) => {
   return (
     <div
-      className="button"
+      className="button flex-jc-c-ai-c"
       style={{
         width: width,
         height: height,
