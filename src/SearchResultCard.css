@@ -6,6 +6,9 @@
   padding: 18px 32px;
   border-radius: 5px;
 }
+
 .loader__container {
   justify-content: center;
+  display: flex;
+  align-items: center;
 }

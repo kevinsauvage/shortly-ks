@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .App {
   overflow: hidden;
 }
@@ -20,9 +21,11 @@ body {
   list-style: none;
   font-family: "Poppins", sans-serif;
 }
+
 input:focus {
   outline: none;
 }
+
 input {
   border: none;
 }
@@ -31,27 +34,32 @@ input {
   display: flex;
   justify-content: center;
 }
+
 .flex-jc-sb {
   display: flex;
   justify-content: space-between;
 }
+
 .flex-jc-c-ai-c {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .flex-jc-sb-ai-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .flex-ai-c {
   display: flex;
   align-items: center;
 }
+
 .container {
   display: flex;
-  max-width: 1110px;
+  max-width: 1024px;
   margin: 0 auto;
   width: 100%;
   height: 100%;
