@@ -51,7 +51,7 @@
     left: unset;
     transform: none;
     transition: all 0.3s ease-in;
-    background-color: #3a305481;
+    background-color: #1c1233ab;
     height: 100vh;
     max-width: 100vw;
     width: 100%;
@@ -75,13 +75,15 @@
 
   .header__left__nav {
     flex-direction: column;
-    border-bottom: 1px solid white;
     padding-bottom: 30px;
     background: #3a3054;
     padding: 53px;
     justify-content: space-around;
     border-radius: 5px;
     height: 247px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   }
 
   .header__right__btn__container {
@@ -90,6 +92,9 @@
     background-color: #3a3054;
     border-radius: 5px;
     margin-top: 20px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   }
 
   .header__left__nav>li {
@@ -99,6 +104,7 @@
     font-size: 18px;
     line-height: 27px;
     color: #ffffff;
+
   }
 
   .header__right__btn__container>li {
