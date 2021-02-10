@@ -264,7 +264,7 @@
     align-items: center;
     flex-direction: column;
     padding: 24px;
-    height: fit-content;
+    height: 250px;
   }
 
   .second__section__search__input__container>div>input {
@@ -290,10 +290,9 @@
 
   #alert__url {
     color: #f46363;
-    position: initial;
-    font-size: 13px;
+    font-size: 15px;
+    bottom: 130px;
     line-height: 1px;
-    margin-bottom: 19px;
   }
 
   .second__section__text>h3 {
