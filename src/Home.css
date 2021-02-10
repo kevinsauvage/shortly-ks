@@ -349,8 +349,10 @@
   }
 
   .card {
+    align-self: center;
+    text-align: center;
     width: 360px;
-    max-width: 360px;
+    max-width: 360px !important;
     margin-bottom: 48px;
   }
 
@@ -360,11 +362,6 @@
     min-height: 1200px;
     padding-bottom: 120px;
     padding-top: 110px;
-  }
-
-  .card {
-    align-self: center;
-    text-align: center;
   }
 
   .card__icon {
