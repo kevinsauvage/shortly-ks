@@ -197,7 +197,7 @@
     top: 0px;
     right: 0px;
     z-index: 1000;
-    width: 100%;
+    width: unset;
     display: flex;
     justify-content: flex-end;
     padding: 15px;
@@ -264,7 +264,7 @@
     align-items: center;
     flex-direction: column;
     padding: 24px;
-    height: 250px;
+    height: 200px;
   }
 
   .second__section__search__input__container>div>input {
@@ -308,7 +308,8 @@
   }
 
   .second__section>div {
-    width: 327px;
+    width: 360px;
+    margin-top: 50px;
   }
 
   .second__section__text>p {
@@ -320,7 +321,7 @@
   }
 
   .second__section__results__container {
-    margin-bottom: 80px;
+    margin: 30px 0;
   }
 
   .second__section__results__container>div {
@@ -348,7 +349,8 @@
   }
 
   .card {
-    width: 327px;
+    width: 360px;
+    max-width: 360px;
     margin-bottom: 48px;
   }
 

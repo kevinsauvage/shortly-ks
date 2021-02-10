@@ -32,6 +32,7 @@ const Header = () => {
       props.setMenuIsOpen(false);
     }
   };
+
   return (
     <div
       onClick={handleClickOutsideNav}
